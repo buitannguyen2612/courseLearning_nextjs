@@ -1,17 +1,30 @@
+"use client"
 import { Avatar, Box, Card, CardContent, CardMedia, IconButton, Rating, Typography } from '@mui/material'
 import ShareIcon from "@mui/icons-material/Share";
 import React, { useState } from 'react'
 import styles from './page.module.css'
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function AllProductCard({ item }) {
 
     const router = useRouter()
 
-    const handleGetByID = (e) =>{
+    const [LocalDT, setLocalDT] = useState([])
+
+    const handleGetByID = (e) => {
         const IdProduct = item.id
         router.push(`/DetailPage/${IdProduct}`)
     }
+
+    useEffect(() => {
+        if (localStorage.getItem('buy')) {
+            setLocalDT(JSON.parse(localStorage.getItem('buy')))
+        }
+        else return
+    }, [])
+
+    const hasIdOne = LocalDT.some(item => item.id === 2);
 
     return (
         <Box
@@ -20,16 +33,16 @@ export default function AllProductCard({ item }) {
                     maxWidth: 'calc(25% - 7.5px)',
                     width: 'calc(25% - 7.5px)',
                     height: "350px",
-                    display: 'flex',
+                    display: LocalDT.some(vl => vl.id === item.id) ? 'none' : 'flex' ,
                     alignItems: "center",
                     position: "relative",
-                    cursor: "pointer"
+                    cursor: "pointer",
                 }
             }
             className={styles['box-contain']}
-              onClick={e => handleGetByID(e)}
+            onClick={e => handleGetByID(e)}
         >
-            <Box component='span' className={styles.span}>500.000 đ</Box>
+            <Box component='span' className={styles.span}>500.000</Box>
             <Card
                 sx={
                     {

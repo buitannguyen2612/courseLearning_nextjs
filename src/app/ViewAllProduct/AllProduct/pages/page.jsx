@@ -1,22 +1,35 @@
 "use client"
 import { Box, FormControl, InputLabel, MenuItem, Pagination, Select, Stack, Typography } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ListAllProduct from '../components/listAllProduct/page'
 import { GetData } from './callAPI'
 
-export default function AllCourseUser() {
+export default function AllCourseUser({ serachText }) {
     const [currentPage, setCurrentPage] = useState(1);
     const [category, setCategory] = useState(0)
+    const[dataAllCouese,setDataAll] = useState([])
 
     const itemsPerPage = 8
 
     let getAllDaTa = GetData(category)
 
+    useEffect(() => {
+        const data = GetData(category)
+        if (serachText.length > 0) {
+         const searchAll =  data.filter(vl => {
+                return vl.courseName.toLowerCase().includes(serachText)
+            });
+            setDataAll(searchAll)
+        }
+        else setDataAll(data)
+    }, [serachText])
+
+
     // xac dinh so trang
-    const pageCount = Math.ceil(getAllDaTa.length / itemsPerPage);
+    const pageCount = Math.ceil(dataAllCouese?.length / itemsPerPage);
 
     // xac dinh san pham nao se duoc render
-    const displayedData = getAllDaTa.slice(
+    const displayedData = dataAllCouese?.slice(
         (currentPage - 1) * itemsPerPage,
         ((currentPage - 1) + 1) * itemsPerPage
     );
@@ -31,6 +44,8 @@ export default function AllCourseUser() {
     const handleCategory = (e) => {
         setCategory(e.target.value)
     }
+
+
 
     return (
         <Box sx={{ height: 'auto', width: "100%", marginTop: "30px", display: "flex", flexDirection: "column", alignItems: "flex-start" }}>

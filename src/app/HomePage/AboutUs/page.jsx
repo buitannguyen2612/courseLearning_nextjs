@@ -3,6 +3,9 @@ import { Box, Typography } from '@mui/material'
 import aboutUsImage from '../images/Rectangle.svg'
 import Image from 'next/image'
 import React from 'react'
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function AboutUs() {
   return (
@@ -54,9 +57,9 @@ export default function AboutUs() {
             }
           }
         >
-          <Typography variant='h1' sx={{ color: '#FFF', fontWeight: '700' }}>About Us</Typography>
-          <Typography variant='body1' sx={{ color: '#FFF', fontSize: '14px', fontWeight: '400' }}>With the motto "From learner to learner", we comfortably understand the problems students are facing today. Because we are all learners, we want to bring value to learners as well as want the website to be effective and constantly innovate.</Typography>
-          <Typography variant='body1' sx={{ color: '#FFF', fontSize: '14px', fontWeight: '400' }}>At EASY QUIZZY, students can consolidate and absorb knowledge more easily through a variety of learning methods and learning tools, increasing their ability to self-study and actively review in their own time. Improve your knowledge and connect with other students through forums and blogs.</Typography>
+          <Typography variant='h1' sx={{ color: '#FFF', fontWeight: '700' ,fontFamily:montserrat.style.fontFamily}}>About Us</Typography>
+          <Typography variant='body1' sx={{ color: '#FFF', fontSize: '14px', fontWeight: '400',fontFamily:montserrat.style.fontFamily,textAlign:"justify" }}>With the motto "From learner to learner", we comfortably understand the problems students are facing today. Because we are all learners, we want to bring value to learners as well as want the website to be effective and constantly innovate.</Typography>
+          <Typography variant='body1' sx={{ color: '#FFF', fontSize: '14px', fontWeight: '400',fontFamily:montserrat.style.fontFamily,textAlign:"justify" }}>At EASY QUIZZY, students can consolidate and absorb knowledge more easily through a variety of learning methods and learning tools, increasing their ability to self-study and actively review in their own time. Improve your knowledge and connect with other students through forums and blogs.</Typography>
         </Box>
       </Box>
     </Box>

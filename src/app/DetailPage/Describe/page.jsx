@@ -23,12 +23,12 @@ export default function Describe() {
                     }
                 }
             >
-                <Typography variant='h4' sx={{ color: "#24024F", fontSize: "36px", fontWeight: "700", letterSpacing: "-0.5px", lineHeight: "85px" }}>Describe</Typography>
+                <Typography variant='h4' sx={{ color: "#24024F", fontSize: "36px", fontWeight: "700", letterSpacing: "-0.5px", lineHeight: "85px", ml:"16px" }}>Describe</Typography>
             </Box>
             <Stack
                 direction="column"
                 spacing={2}
-                m="15px 10px 0 45px"
+                m="15px 10px 0 16px"
                 gap="20px"
                 sx={
                     {

@@ -24,9 +24,9 @@ export default function CourseSubject() {
                     }
                 }
             >
-                <Typography variant='h4' sx={{ color: "#24024F", fontSize: "36px", fontWeight: "700", letterSpacing: "-0.5px", lineHeight: "85px" }}>Subject course</Typography>
+                <Typography variant='h4' sx={{ color: "#24024F", fontSize: "36px", fontWeight: "700", letterSpacing: "-0.5px", lineHeight: "85px",pl:"16px" }}>Subject course</Typography>
             </Box>
-            <List sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper', paddingLeft:"35px"}}>
+            <List sx={{ width: '100%', maxWidth: '100%', bgcolor: 'background.paper', paddingLeft:"16px"}}>
                 <ListItem disablePadding>
                     <ListItemIcon sx={{ minWidth: "35px" }}>
                         <StarIcon />

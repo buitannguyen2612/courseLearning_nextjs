@@ -52,7 +52,7 @@ export default function CardPrice({ passParam, handleProps }) {
                 <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: "700", color: "#7F56D9" }}>
                     500.000đ
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{textAlign:"justify"}}>
                     {data.des}
                 </Typography>
             </CardContent>

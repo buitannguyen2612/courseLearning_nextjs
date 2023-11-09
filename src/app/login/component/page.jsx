@@ -46,17 +46,18 @@ export default function LoginPage({handleCheckLogin}) {
       }
     }
   >
-    <TextField id="filled-basic" label="user name" variant="filled"
+    <TextField id="filled-basic" label="User name" variant="filled"
       sx={
         {
           '& label.Mui-focused': { color: "#7f56d9" }, border: "solid white 1px", '& ::placeholder': { color: "blue" },
-          borderTopLeftRadius: "10px",
-          borderTopRightRadius: "10px",
+          // borderTopLeftRadius: "10px",
+          // borderTopRightRadius: "10px",
           width: "100%",
           '& .MuiFilledInput-underline:after': {
             borderBottomColor: '#7f56d9'
           },
-          height: "50px"
+          height: "50px",
+          borderRadius:"10px"
         }
       }
       inputProps={{ style: { color: 'white' } }}
@@ -67,13 +68,14 @@ export default function LoginPage({handleCheckLogin}) {
 
     <FormControl sx={{
       '& label.Mui-focused': { color: "white" }, border: "solid white 1px", '& ::placeholder': { color: "blue" },
-      borderTopLeftRadius: "10px",
-      borderTopRightRadius: "10px",
+      // borderTopLeftRadius: "10px",
+      // borderTopRightRadius: "10px",
       '& .MuiFilledInput-underline:after': {
         borderBottomColor: '#7f56d9'
       },
       height: "50px",
-      width: "100%"
+      width: "100%",
+      borderRadius:"10px"
     }} variant="filled">
       <InputLabel htmlFor="filled-adornment-password" sx={{ color: "white" }}>Password</InputLabel>
       <FilledInput
@@ -83,7 +85,7 @@ export default function LoginPage({handleCheckLogin}) {
         id="filled-adornment-password"
         type={showPassword ? 'text' : 'password'}
         endAdornment={
-          <InputAdornment position="end">
+          <InputAdornment position="end" sx={{height:"100%", mb:"8px"}}>
             <IconButton
               aria-label="toggle password visibility"
               onClick={handleClickShowPassword}
@@ -107,12 +109,13 @@ export default function LoginPage({handleCheckLogin}) {
       sx={
         {
           width: "100%",
-          height: "50px"
+          height: "50px",
+          mt:"30px"
         }
       }
     >
-      <Button variant="contained" sx={{ width: "100px", backgroundColor: "#7f56d9", '&:hover': { backgroundColor: "rgba(198, 158, 223, 1)" } }} onClick={handleLogin}>Login</Button>
-      <Button variant="contained" sx={{ width: "100px", backgroundColor: "#7f56d9", '&:hover': { backgroundColor: "rgba(198, 158, 223, 1)" } }}>Register</Button>
+      <Button variant="contained" sx={{ width: "200px", backgroundColor: "#7f56d9", '&:hover': { backgroundColor: "rgba(198, 158, 223, 1)" } }} onClick={handleLogin}>Login</Button>
+      <Button variant="contained" sx={{ width: "200px", backgroundColor: "#7f56d9", '&:hover': { backgroundColor: "rgba(198, 158, 223, 1)" } }}>Register</Button>
     </Stack>
   </Box>
 

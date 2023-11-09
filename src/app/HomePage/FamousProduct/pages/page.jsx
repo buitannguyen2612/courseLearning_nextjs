@@ -5,17 +5,20 @@ import { useEffect, useState } from 'react';
 import ListFamous from '../components/ListFamousProduct/page';
 import { getAllCard, getAllProduct } from './apiCalling';
 import styles from './page.module.css';
+import { Montserrat } from 'next/font/google';
 // rfec
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 function ProductNav() {
 
     const router = useRouter()
 
-    const[currentPage, setCurrentPage] = useState(1)
+    const [currentPage, setCurrentPage] = useState(1)
     const [dataProduct, setDataProduct] = useState([])
     const [totalProduct, setTotalProduct] = useState()
     const [totalPage, setTotalPage] = useState()
-    
+
     // lay data tu calldata
     const data = getAllCard().data
 
@@ -31,7 +34,7 @@ function ProductNav() {
         ((currentPage - 1) + 1) * itemPerPage
     );
 
-    const handlePagnating = (e, vl) =>{
+    const handlePagnating = (e, vl) => {
         setCurrentPage(vl)
     }
 
@@ -52,9 +55,9 @@ function ProductNav() {
         getProduct(+event.selected + 1)
     }
 
-    const navViewmore = () =>{
+    const navViewmore = () => {
         router.push('/ViewAllProduct')
-      }
+    }
     return (
         <Box sx={
             {
@@ -76,9 +79,9 @@ function ProductNav() {
                     justifyContent: 'flex-start',
                 }
             }>
-                <Typography variant='body1' sx={{ color: '#24024F', fontSize: '24px', fontWeight: '600' }}>Explore our courses and you will receive many great things</Typography>
-                <Typography variant='body1' sx={{ color: '#7F56D9', fontSize: "60px", fontWeight: "700" }}>FAMOUS COURSE HERE</Typography>
-                <Typography variant='body2' sx={{ color: '#667085', fontSize: "18px", fontWeight: "400" }}>Please join our class, the knowledge provided will definitely be useful to you.</Typography>
+                <Typography variant='body1' sx={{ color: '#24024F', fontSize: '24px', fontWeight: '600', fontFamily: montserrat.style.fontFamily }}>Explore our courses and you will receive many great things</Typography>
+                <Typography variant='body1' sx={{ color: '#7F56D9', fontSize: "60px", fontWeight: "700", fontFamily: montserrat.style.fontFamily }}>FAMOUS COURSE HERE</Typography>
+                <Typography variant='body2' sx={{ color: '#667085', fontSize: "18px", fontWeight: "400", fontFamily: montserrat.style.fontFamily }}>Please join our class, the knowledge provided will definitely be useful to you.</Typography>
             </Box>
 
             <Box sx={
@@ -94,7 +97,6 @@ function ProductNav() {
             }>
                 <ListFamous dataProduct={displayedData} />
                 <Pagination count={pageCount} color="secondary" onChange={handlePagnating} sx={{ marginTop: "30px", width: "100%", display: "flex", justifyContent: "center" }} />
-                <Button variant="outlined" className={styles['btn-famous']}  onClick={navViewmore}>View more</Button>
             </Box>
         </Box>
     )

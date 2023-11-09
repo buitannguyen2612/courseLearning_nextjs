@@ -1,16 +1,17 @@
 "use client";
-import React from 'react';
-import { Box, Button, Card, CardMedia, Container, CssBaseline, Paper, Typography, styled } from '@mui/material';
-import { shadows } from '@mui/system';
+import { Box, Button, CssBaseline, Paper, Typography, styled } from '@mui/material';
+import { Montserrat } from 'next/font/google';
 import Image from 'next/image';
-import styles from './page.module.css'
-import circleHero from '../images/herocircle.png'
-import womenHero from '../images/women.png'
-import asmtHero from '../images/heroAsm.png'
-import circleOnline from '../images/circleOnline.png'
-import lectureHero from '../images/lecturehero.svg'
-import womenCircleHero from '../images/circleWomenHero.svg'
 import { useRouter } from 'next/navigation';
+import circleOnline from '../images/circleOnline.png';
+import womenCircleHero from '../images/circleWomenHero.svg';
+import asmtHero from '../images/heroAsm.png';
+import circleHero from '../images/herocircle.png';
+import lectureHero from '../images/lecturehero.svg';
+import womenHero from '../images/women.png';
+import styles from './page.module.css';
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 const TitleHome = (props) => {
 
@@ -25,18 +26,6 @@ const TitleHome = (props) => {
     lineHeight: 1.5,
     backgroundColor: '#F4EBFF',
     borderColor: 'none',
-    // fontFamily: [
-    //   '-apple-system',
-    //   'BlinkMacSystemFont',
-    //   '"Segoe UI"',
-    //   'Roboto',
-    //   '"Helvetica Neue"',
-    //   'Arial',
-    //   'sans-serif',
-    //   '"Apple Color Emoji"',
-    //   '"Segoe UI Emoji"',
-    //   '"Segoe UI Symbol"',
-    // ].join(','),
     '&:hover': {
       backgroundColor: '#ffff',
       borderColor: '#6941C6',
@@ -53,22 +42,21 @@ const TitleHome = (props) => {
   });
 
 
-  const handleViewall =() =>{
+  const handleViewall = () => {
     router.push("/login")
   }
 
   return (
-
     <Box sx={{ width: "100%", height: "808px", background: "#FBFAFF", display: "flex", userSelect: "none", }}>
       <CssBaseline />
       <Box sx={{ flex: "1", display: "flex", flexDirection: "column", alignItems: "center", padding: '150px 0 0 75px' }}>
         <Box sx={{ width: "100%", display: "flex", flexDirection: "column", gap: "8px", padding: "0px 0px 0px 140px", position: "relative" }}>
           <Paper elevation={0} className={styles['hero-title']} sx={{ width: "100%", backgroundColor: "#FBFAFF", }}>
-            <Typography className={styles['hero-title']} sx={{ fontSize: "40px", fontWeight: "600", }}>
-              <span>Học</span> Chưa bao giờ <br /> <span >dễ đến vậy <br /></span> Hãy để Chúng tôi <span ><br /> Giúp bạn!</span>
+            <Typography className={styles['hero-title']} sx={{ lineHeight: "60px", fontSize: "48px", fontWeight: "700", fontFamily: montserrat.style.fontFamily }}>
+              <span>Học</span> chưa bao giờ <br /> <span >dễ đến vậy, <br /></span> Hãy để chúng tôi <span ><br /> giúp bạn!</span>
             </Typography>
           </Paper>
-          <Typography variant='body1'>Cung cấp cho bạn hệ thống tài liệu học tập trực tuyến mới nhất,<br /> củng cố kiến thức để phát triển.</Typography>
+          <Typography sx={{ fontFamily: montserrat.style.fontFamily }} variant='body1'>Cung cấp cho bạn hệ thống tài liệu học tập trực tuyến mới nhất,<br /> củng cố kiến thức để phát triển.</Typography>
           <Image
             src={circleHero}
             alt="Your Image"
@@ -82,11 +70,11 @@ const TitleHome = (props) => {
             }}
           />
         </Box>
-        <Box sx={{ display: "flex", width: "100%", padding: "0 0 0 140px", justifyContent: "flex-start", gap: "20px", marginTop: "30px" }}>
-          <Button variant="contained" disableElevation sx={{ backgroundColor: "#7F56D9", '&:hover': { backgroundColor: '#6941C6' } }} onClick={handleViewall}>
+        <Box sx={{ display: "flex", width: "100%", height: "50px", padding: "0 0 0 140px", justifyContent: "flex-start", gap: "40px", marginTop: "30px" }}>
+          <Button variant="contained" disableElevation sx={{ backgroundColor: "#7F56D9", '&:hover': { backgroundColor: '#6941C6', }, fontFamily: montserrat.style.fontFamily }} onClick={handleViewall}>
             Bắt đầu học
           </Button>
-          <BootstrapButton variant="contained" disableElevation sx={{ color: "#6941C6", fontWeight: "600" }}>
+          <BootstrapButton variant="contained" disableElevation sx={{ color: "#6941C6", fontWeight: "600", fontFamily: montserrat.style.fontFamily }}>
             Tìm hiểu thêm
           </BootstrapButton>
         </Box>
@@ -123,7 +111,7 @@ const TitleHome = (props) => {
                 borderRadius: '18px',
                 boxShadow: 3,
                 height: '94px',
-                width: '220px',
+                width: '260px ',
                 backgroundColor: '#F5F5F4',
                 border: 'solid 2px #7F56D9',
                 position: 'absolute',
@@ -144,15 +132,15 @@ const TitleHome = (props) => {
               display='flex'
               sx={
                 {
-                  width: '80px',
+                  width: '100px',
                   height: '100%',
                   flexDirection: 'column',
                   alignItems: 'flex-start',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
                 }
               }>
-              <span>5K+</span>
-              <span>Đề kiểm tra</span>
+              <span className={montserrat.className}>5K+</span>
+              <span className={montserrat.className}>Đề kiểm tra</span>
             </Box>
           </Box>
           <Box
@@ -189,8 +177,8 @@ const TitleHome = (props) => {
                   justifyContent: 'center'
                 }
               }>
-              <span>5K+</span>
-              <span>Video</span>
+              <span className={montserrat.className}>5K+</span>
+              <span className={montserrat.className}>Video</span>
             </Box>
           </Box>
           <Box
@@ -233,8 +221,8 @@ const TitleHome = (props) => {
                   justifyContent: 'center',
                 }
               }>
-              <span>250+</span>
-              <span>Khóa học online</span>
+              <span className={montserrat.className}>250+</span>
+              <span className={montserrat.className}>Khóa học online</span>
             </Box>
           </Box>
           <Image

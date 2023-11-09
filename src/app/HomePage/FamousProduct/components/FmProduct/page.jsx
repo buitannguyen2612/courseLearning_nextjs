@@ -1,13 +1,16 @@
-// rfec
+"use client"
 import { Avatar, Box, Button, Card, CardContent, CardMedia, Rating, Stack, Typography } from '@mui/material';
+import { Montserrat } from 'next/font/google';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
+const monogra = Montserrat({ subsets: ['latin'] })
+
+
 function FmProduct({ item }) {
-
-
-
   const [isHover, setIshover] = useState(false)
 
+  const roter = useRouter()
   // handle hover of img box
   const handleMouseEnter = () => {
     setIshover(true)
@@ -18,7 +21,9 @@ function FmProduct({ item }) {
     setIshover(false)
   }
 
-  
+  const navtoLogin = () => {
+    roter.push('/login')
+  }
 
   return (
     <Card
@@ -29,6 +34,7 @@ function FmProduct({ item }) {
         cursor: "pointer",
         padding: "12px 12px"
       }}
+      className={monogra.className}
 
     >
       <Box
@@ -55,10 +61,10 @@ function FmProduct({ item }) {
         />
       </Box>
       <CardContent sx={{ p: 0 }}>
-        <Typography marginBottom='20px' variant="h6" component="div" sx={{ fontWeight: "600", color: "#6941C6" }}>
-         {item.courseName}
+        <Typography marginBottom='20px' variant="h6" component="div" sx={{ fontWeight: "600", color: "#6941C6", fontFamily: monogra.style.fontFamily }}>
+          {item.courseName}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" sx={{ textAlign: "justify", fontFamily: monogra.style.fontFamily }} >
           {item.des.slice(0, 150)}
         </Typography>
       </CardContent>
@@ -89,12 +95,12 @@ function FmProduct({ item }) {
             alignItems="flex-start"
             sx={{ maxWidth: '300px' }}
           >
-            <Typography variant='subtitle2' sx={{ fontWeight: "600" }}>Author</Typography>
-            <Typography variant='body2'>Name</Typography>
+            <Typography variant='subtitle2' sx={{ fontWeight: "600", fontFamily: monogra.style.fontFamily }}>Author</Typography>
+            <Typography variant='body2' sx={{ fontFamily: monogra.style.fontFamily }}>Name</Typography>
           </Stack>
         </Stack>
 
-        <Button variant="contained" size='small' sx={{ backgroundColor: "#7F56D9", '&:hover': { backgroundColor: '#7f56d9' }, }}>Try now</Button>
+        <Button variant="contained" size='small' sx={{ backgroundColor: "#7F56D9", '&:hover': { backgroundColor: '#7f56d9' }, }} onClick={() => navtoLogin()}>Try now</Button>
       </Stack>
     </Card>
 

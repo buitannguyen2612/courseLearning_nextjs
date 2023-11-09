@@ -25,17 +25,21 @@ export default function FootView() {
                 alignItems="flex-start"
                 justifyContent="center"
                 sx={{
-                    flex: "1",
+                    width:"700px",
+                    paddingTop:"100px"
                 }}
                 spacing={2}
             >
                 <Typography variant='h3' sx={{ color: "#FFF", fontWeight: "600" }}>You're ready to get started
                     with Easy Quizzy yet?</Typography>
-                <Typography variant='body2' sx={{ color: "#FFF" }} >Choose courses that interest you. Learn once, remember many times. Always be diligent. Good luck</Typography>
+                <Typography variant='body2' sx={{ color: "#FFF" }} > Learn once, remember many times. Always be diligent. Good luck!</Typography>
             </Stack>
             <Box
                 sx={{
                     flex: "1",
+                    position:"absolute",
+                    top:'-20px',
+                    right:"0px"
                 }}
             >
                 <Image

@@ -8,7 +8,7 @@ export default function DetailBody() {
             direction='column'
             spacing={0}
             mt="30px"
-            ml="75px"
+            ml="55px"
             sx={
                 {
                     maxWidth: "1200px",
@@ -34,25 +34,25 @@ export default function DetailBody() {
                 spacing={0}
                 sx={
                     {
-                        flex: "4"
+                        flex: "4",
                     }
                 }
             >
-                <Grid item xs={12} md={6} sx={{flex:1, pl:"51px"}}>
-                    <List sx={{color:"#24024F"}}>
+                <Grid item xs={12} md={6} sx={{flex:1}}>
+                    <List sx={{color:"#24024F",pl:"20px"}}>
                         <ListItem>
                             <ListItemText
-                                primary="You will learn how to build ur web with this course"
+                                primary="- You will learn how to build ur web with this course"
                             />
                         </ListItem>
                         <ListItem>
                             <ListItemText
-                                primary="You will learn how to make change to your code"
+                                primary="- You will learn how to make change to your code"
                             />
                         </ListItem>
                         <ListItem>
                             <ListItemText
-                                primary="you will learn how to make performance of your web be better"
+                                primary="- you will learn how to make performance of your web be better more and more"
                             />
                         </ListItem>
                     </List>
@@ -61,17 +61,17 @@ export default function DetailBody() {
                     <List sx={{color:"#24024F"}}>
                         <ListItem>
                             <ListItemText
-                                primary="You will gain more knowledge about UX"
+                                primary="- You will gain more knowledge about UX"
                             />
                         </ListItem>
                         <ListItem>
                             <ListItemText
-                                primary="You will learn more about creating animations"
+                                primary="- You will learn more about creating animations"
                             />
                         </ListItem>
                         <ListItem>
                             <ListItemText
-                                primary="You will understand how the code works"
+                                primary="- You will understand how the code works"
                             />
                         </ListItem>
                     </List>

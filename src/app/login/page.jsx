@@ -1,25 +1,15 @@
 "use client"
 import { Box } from '@mui/material';
-import LoginPage from './component/page';
-import { ToastContainer, toast } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from 'next/navigation';
+import "react-toastify/dist/ReactToastify.css";
+import LoginPage from './component/page';
 
 export default function page() {
 
   const router = useRouter()
 
-  const showToast = () => {
-    toast.success("Success Login !");
-
-  }
-
   const handleCheckLogin = () => {
-    showToast()
-    setTimeout(() => {
       router.push('/ViewAllProduct')
-    }, 3000);
-
   }
   return (
     <Box sx={
@@ -27,23 +17,11 @@ export default function page() {
         height: "100vh",
         width: "100%",
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        position:"relative"
       }
     }>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
-      {/* Same as */}
-      <ToastContainer />
+      <Box sx={{position:"absolute", left:"47%",top:"50px", fontSize:"30px", color:"white", fontWeight:"700"}}>Login</Box>
       <LoginPage handleCheckLogin={handleCheckLogin} />
     </Box>
 
