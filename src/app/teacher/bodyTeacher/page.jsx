@@ -1,6 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { getProfleByID } from '../[profileid]/callApi'
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function BodyTeacher({paramData}) {
 
@@ -19,7 +22,7 @@ export default function BodyTeacher({paramData}) {
         }
     }
     >
-        <Typography>{data.description}</Typography>
+        <Typography sx={{fontFamily:montserrat.style.fontFamily}}>{data.description}</Typography>
     </Box>
   )
 }

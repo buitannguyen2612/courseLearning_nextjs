@@ -15,7 +15,7 @@ export default function OwnProduct({ serachText }) {
   useEffect(() => {
     const boughtCourse = JSON.parse(localStorage.getItem('buy'))
     if (serachText.length > 0) {
-      const boughtSearch = boughtCourse.filter((vl, idx) => {
+      const boughtSearch = boughtCourse?.filter((vl, idx) => {
         return vl.courseName.toLowerCase().includes(serachText.toLowerCase())
       })
       setOwnDatas(boughtSearch)

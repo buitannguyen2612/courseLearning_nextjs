@@ -50,8 +50,6 @@ export default function LoginPage({handleCheckLogin}) {
       sx={
         {
           '& label.Mui-focused': { color: "#7f56d9" }, border: "solid white 1px", '& ::placeholder': { color: "blue" },
-          // borderTopLeftRadius: "10px",
-          // borderTopRightRadius: "10px",
           width: "100%",
           '& .MuiFilledInput-underline:after': {
             borderBottomColor: '#7f56d9'
@@ -68,8 +66,6 @@ export default function LoginPage({handleCheckLogin}) {
 
     <FormControl sx={{
       '& label.Mui-focused': { color: "white" }, border: "solid white 1px", '& ::placeholder': { color: "blue" },
-      // borderTopLeftRadius: "10px",
-      // borderTopRightRadius: "10px",
       '& .MuiFilledInput-underline:after': {
         borderBottomColor: '#7f56d9'
       },

@@ -8,7 +8,7 @@ export default function CourseSubject() {
         <Stack
             direction="column"
             spacing={0}
-            m="50px 0 0 73px"
+            m="50px 0 30px 73px"
             sx={
                 {
                     maxWidth: "1200px",

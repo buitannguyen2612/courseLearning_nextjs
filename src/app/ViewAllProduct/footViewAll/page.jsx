@@ -46,7 +46,7 @@ export default function FootView() {
                     src={computer}
                     alt="Picture of the author"
                     height={600}
-                    width={700}
+                    width={800}
                     objectFit='contain'
                 />
             </Box>

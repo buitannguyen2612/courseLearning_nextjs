@@ -1,5 +1,6 @@
 "use client";
 import UserNavPage from "@/app/UserNavPage/page";
+import FooterGlobal from "@/app/footerglobal/footerGlobal";
 import { Box, ThemeProvider, createTheme } from "@mui/material";
 import { Montserrat } from "next/font/google";
 
@@ -17,6 +18,7 @@ export default function Layout({ children }) {
       <Box>
         <UserNavPage />
         {children}
+        <FooterGlobal/>
       </Box>
     </ThemeProvider>
   );

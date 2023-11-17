@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import "react-toastify/dist/ReactToastify.css";
 import LoginPage from './component/page';
+import Register from './register/register';
 
 export default function page() {
 
@@ -22,7 +23,8 @@ export default function page() {
       }
     }>
       <Box sx={{position:"absolute", left:"47%",top:"50px", fontSize:"30px", color:"white", fontWeight:"700"}}>Login</Box>
-      <LoginPage handleCheckLogin={handleCheckLogin} />
+      {/* <LoginPage handleCheckLogin={handleCheckLogin} /> */}
+      <Register/>
     </Box>
 
 

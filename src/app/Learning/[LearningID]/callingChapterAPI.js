@@ -3,7 +3,7 @@ const data = {
         {
             id:1,
             CategoryID:1,
-            Name:"lerning css and HTML basic",
+            Name:"Reacjs",
             creatorID:2,
             Chapters:[
                 {
@@ -20,72 +20,72 @@ const data = {
                         },
                         {
                             id:2,
-                            Name:'Dowload the IDE',
+                            Name:'Importing and Exporting Components',
                             ChapterId:1,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/dsha7HgqMhI",
                             Content:"day la noi dung cua khoa hoc"
                         },
                         {
                             id:3,
-                            Name:'Dowload the IDE',
+                            Name:'Writing Markup with JSX',
                             ChapterId:1,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/ZKaDy0mNHGs",
                             Content:"day la noi dung cua khoa hoc"
                         },
                     ]
                 },
                 {
                     id:2,
-                    Name:"What you need to focus in this course",
+                    Name:"Describing the UI",
                     CourseID:1,
                     Documents:[
                         {
                             id:1,
-                            Name:'Dowload the IDE',
+                            Name:'Your First Component',
                             ChapterId:2,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/aDJ6I9wpImE",
                             Content:"day la noi dung cua khoa hoc"
                         },
                         {
                             id:2,
-                            Name:'Dowload the IDE',
+                            Name:'Components: UI building blocks ',
                             ChapterId:2,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/BWJJwk2j-7A",
                             Content:"day la noi dung cua khoa hoc"
                         },
                         {
                             id:3,
-                            Name:'Dowload the IDE',
+                            Name:'Defining a component',
                             ChapterId:2,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/MH7laDSqzPY",
                             Content:"day la noi dung cua khoa hoc"
                         }
                     ]
                 },
                 {
                     id:3,
-                    Name:"starting css in part 1",
+                    Name:"Adding Interactivity",
                     CourseID:1,
                     Documents:[
                         {
                             id:1,
-                            Name:'Dowload the IDE',
+                            Name:'Responding to events ',
                             ChapterId:3,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/JvrHjk-CJw4",
                             Content:"day la noi dung cua khoa hoc"
                         },
                         {
                             id:2,
-                            Name:'Dowload the IDE',
+                            Name:'State: a components memory',
                             ChapterId:3,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/MY6ZZIn93V8",
                             Content:"day la noi dung cua khoa hoc"
                         },
                         {
                             id:3,
-                            Name:'Dowload the IDE',
+                            Name:'Render and commit ',
                             ChapterId:3,
-                            VideoURL:"https://www.youtube.com/embed/m5wM8Z_OR2E",
+                            VideoURL:"https://www.youtube.com/embed/kyRclsioJBQ",
                             Content:"day la noi dung cua khoa hoc"
                         }
                     ]
@@ -186,6 +186,282 @@ const data = {
                             VideoURL:"https://www.youtube.com/embed/FXpIoQ_rT_c",
                             Content:"Vue.js (pronounced view) is an open source JavaScript framework widely used for building single-page web applications (Single-Page Applications - SPAs) and interactive user interfaces. Vue.js first launched in 2014 and quickly became a popular choice for web developers."
                         },
+                    ]
+                }
+            ]
+        },
+        {
+            id:3,
+            CategoryID:1,
+            Name:"Nextjs",
+            creatorID:2,
+            Chapters:[
+                {
+                    id:1,
+                    Name:"How to setup enviroment",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Dowload the IDE',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/JPZsB_6yHVo",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Importing and Exporting Components',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/dsha7HgqMhI",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Writing Markup with JSX',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/ZKaDy0mNHGs",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                    ]
+                },
+                {
+                    id:2,
+                    Name:"Describing the UI",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Your First Component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/aDJ6I9wpImE",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Components: UI building blocks ',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/BWJJwk2j-7A",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Defining a component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/MH7laDSqzPY",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
+                    ]
+                },
+                {
+                    id:3,
+                    Name:"Adding Interactivity",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Responding to events ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/JvrHjk-CJw4",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'State: a components memory',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/MY6ZZIn93V8",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Render and commit ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/kyRclsioJBQ",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            id:4,
+            CategoryID:1,
+            Name:"Angularjs",
+            creatorID:2,
+            Chapters:[
+                {
+                    id:1,
+                    Name:"How to setup enviroment",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Dowload the IDE',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/g_K1w8e0lLo",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Importing and Exporting Components',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/pNX5GBTlc70",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Writing Markup with JSX',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/JXu3Ib4vAuI",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                    ]
+                },
+                {
+                    id:2,
+                    Name:"Describing the UI",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Your First Component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/qdlmhnnkCBE",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Components: UI building blocks ',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/c4nLN3cCybg",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Defining a component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/SMF_cAI4PM0",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
+                    ]
+                },
+                {
+                    id:3,
+                    Name:"Adding Interactivity",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Responding to events ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/Ey9xTHjw_x8",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'State: a components memory',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/DFCC8nBYqLE",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Render and commit ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/p_TEBFDsNuc",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            id:5,
+            CategoryID:1,
+            Name:"Vuejs",
+            creatorID:2,
+            Chapters:[
+                {
+                    id:1,
+                    Name:"How to setup enviroment",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Vuejs is fast ?',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/9QNJuzBBBoA",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Vuejs and Exporting Components',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/lHZwlzOUOZ4",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Writing Markup with JSX',
+                            ChapterId:1,
+                            VideoURL:"https://www.youtube.com/embed/YjhkcvS1xKU",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                    ]
+                },
+                {
+                    id:2,
+                    Name:"Describing the UI",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Your First Component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/ifTF3ags0XI",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'Components: UI building blocks ',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/c4nLN3cCybg",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Defining a component',
+                            ChapterId:2,
+                            VideoURL:"https://www.youtube.com/embed/SMF_cAI4PM0",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
+                    ]
+                },
+                {
+                    id:3,
+                    Name:"Adding Interactivity",
+                    CourseID:1,
+                    Documents:[
+                        {
+                            id:1,
+                            Name:'Responding to events ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/cYLGboNUOlk",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:2,
+                            Name:'State: a components memory',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/c24Qr9HaaIY",
+                            Content:"day la noi dung cua khoa hoc"
+                        },
+                        {
+                            id:3,
+                            Name:'Render and commit ',
+                            ChapterId:3,
+                            VideoURL:"https://www.youtube.com/embed/QvtDa77Mf6c",
+                            Content:"day la noi dung cua khoa hoc"
+                        }
                     ]
                 }
             ]

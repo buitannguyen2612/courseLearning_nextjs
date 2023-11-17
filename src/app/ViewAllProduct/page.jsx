@@ -7,6 +7,7 @@ import OwnProduct from './OwnProduct/pages/page'
 import SliderHero from './SliderHero/page'
 import FootView from './footViewAll/page'
 import { useState } from 'react'
+import FooterGlobal from '../footerglobal/footerGlobal'
 
 export default function page() {
 
@@ -22,6 +23,7 @@ export default function page() {
         <AllCourseUser serachText={serachText}/>
         <FootView />
       </Box>
+      <FooterGlobal/>
     </Box>
   )
 }

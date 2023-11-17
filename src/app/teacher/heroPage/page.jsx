@@ -4,6 +4,9 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ContactEmergencyIcon from '@mui/icons-material/ContactEmergency';
 import React from 'react'
 import { getProfleByID } from '../[profileid]/callApi'
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function HeroPage({ paramData }) {
 
@@ -29,13 +32,13 @@ export default function HeroPage({ paramData }) {
             <Box
                 sx={{ flex: "1", display: "flex", flexDirection: "column", alignItems: "center" }}
             >
-                <Typography variant='h6' sx={{ height: "max-content", width: "max-content", mt: "100px", fontWeight: "700" }}>{data.authorName}</Typography>
+                <Typography variant='h6' sx={{ height: "max-content", width: "max-content", mt: "100px", fontWeight: "700",fontFamily:montserrat.style.fontFamily }}>{data.authorName}</Typography>
 
                 <Rating name="read-only" value={3} readOnly fontSize="inherit" />
                 <Box sx={{ width:"100%", mt:"30px", display:"flex",justifyContent:"center", gap:"50px"}}>
-                    <Box sx={{display:"flex", alignItems:"center", gap:"5px"}}><FmdGoodIcon/>{data.location}</Box>
-                    <Box sx={{display:"flex", alignItems:"center", gap:"5px"}}><CalendarMonthIcon/>{data.DOB}</Box>
-                    <Box sx={{display:"flex", alignItems:"center", gap:"5px"}}><ContactEmergencyIcon/>{data.email}</Box>
+                    <Box sx={{display:"flex", alignItems:"center", gap:"5px",fontFamily:montserrat.style.fontFamily}}><FmdGoodIcon/>{data.location}</Box>
+                    <Box sx={{display:"flex", alignItems:"center", gap:"5px",fontFamily:montserrat.style.fontFamily}}><CalendarMonthIcon/>{data.DOB}</Box>
+                    <Box sx={{display:"flex", alignItems:"center", gap:"5px", fontFamily:montserrat.style.fontFamily}}><ContactEmergencyIcon/>{data.email}</Box>
                 </Box>
             </Box>
             <Avatar

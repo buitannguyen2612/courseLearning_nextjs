@@ -32,6 +32,7 @@ export default function UserNavPage({setSeach}) {
     setAnchorElUser(null);
     if (idx == 0) {
       router.push('/login')
+      localStorage.removeItem('buy');
     }
   };
 

@@ -16,7 +16,7 @@ export default function AllCourseUser({ serachText }) {
     useEffect(() => {
         const data = GetData(category)
         if (serachText.length > 0) {
-         const searchAll =  data.filter(vl => {
+         const searchAll =  data?.filter(vl => {
                 return vl.courseName.toLowerCase().includes(serachText)
             });
             setDataAll(searchAll)
